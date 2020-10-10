@@ -1,7 +1,6 @@
-# node-clener
+# node-clener ![build](https://github.com/KaranGauswami/node-cleaner/workflows/Rust/badge.svg)
 
 Simple script to remove all the node modules from older projects
-
 
 ## About
 
