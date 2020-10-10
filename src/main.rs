@@ -4,7 +4,7 @@ use structopt::StructOpt;
 use trash;
 
 #[derive(StructOpt, Debug)]
-#[structopt(name = "basic")]
+#[structopt(name = "node-cleaner")]
 struct Cli {
     #[structopt(short, long, default_value = ".")]
     /// Path to run the script
@@ -28,7 +28,8 @@ fn main() -> std::io::Result<()> {
     let target = args.target;
     let days = args.days;
     let force = args.force;
-    scan_folder(path, &target, days, force)
+    let _ = scan_folder(path, &target, days, force);
+    Ok(())
 }
 fn scan_folder(path: &Path, target: &str, days: f64, force: bool) -> std::io::Result<()> {
     let file_metadata = fs::metadata(path)?;
@@ -54,7 +55,7 @@ fn scan_folder(path: &Path, target: &str, days: f64, force: bool) -> std::io::Re
                     println!("deleted {:?}", data.path());
                 }
             } else if data.metadata()?.is_dir() {
-                scan_folder(&data.path(), target, days, force);
+                let _ = scan_folder(&data.path(), target, days, force);
             }
         }
     }
