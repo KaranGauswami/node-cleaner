@@ -30,10 +30,8 @@ Follow these instructions to compile `node-cleaner`, then skip down to Installat
 There are a few options for using `node-cleaner`.
 
 ```text
-node-cleaner 0.1.0
-
 USAGE:
-    node-modules-cleaner [FLAGS] [OPTIONS]
+    node-cleaner [FLAGS] [OPTIONS]
 
 FLAGS:
     -f, --force      whether or not move files to trash instead of permenant deletion
