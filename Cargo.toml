@@ -1,0 +1,11 @@
+[package]
+name = "node-cleaner"
+version = "0.1.0"
+authors = ["KaranGauswami <karangauswami.dev@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+structopt="0.3.19"
+failure="0.1.8"
+exitfailure="0.5.1"
+trash="1.1.1"
