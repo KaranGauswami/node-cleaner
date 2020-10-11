@@ -1,7 +1,10 @@
 [package]
 name = "node-cleaner"
-version = "0.1.2"
+version = "0.2.0"
 authors = ["KaranGauswami <karangauswami.dev@gmail.com>"]
+description = "Simple script to remove all the node modules from older projects"
+repository = "https://github.com/KaranGauswami/node-cleaner"
+keywords= ["node-modules","clean"]
 edition = "2018"
 
 [dependencies]
