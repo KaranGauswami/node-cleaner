@@ -1,6 +1,7 @@
 use std::fs;
 use std::path::Path;
 use structopt::StructOpt;
+use std::io::Result as IoResult;
 use trash;
 
 #[derive(StructOpt, Debug)]
@@ -22,7 +23,7 @@ struct Cli {
     #[structopt(short, long)]
     force: bool,
 }
-fn main() -> std::io::Result<()> {
+fn main() -> IoResult<()> {
     let args = Cli::from_args();
     let path = Path::new(&args.path);
     let target = args.target;

@@ -8,7 +8,5 @@ keywords= ["node-modules","clean"]
 edition = "2018"
 
 [dependencies]
-structopt="0.3.19"
-failure="0.1.8"
-exitfailure="0.5.1"
+structopt="0.3.20"
 trash="1.1.1"
